@@ -3,7 +3,7 @@
 Sistema de gestión de una tienda en línea construido con una arquitectura de **microservicios** en Python usando **FastAPI**. Cada servicio es independiente, expone su propia API REST y se comunica con los demás mediante llamadas HTTP.
 
 > **Tecnológico Nacional de México — Campus Querétaro** 
-> Materia: Desarrollo de Software 
+> Materia: Arquitectura Orientada a Servicios 
 > Autor: Diego Arias
 
 ---
