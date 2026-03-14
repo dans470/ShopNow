@@ -1,0 +1,44 @@
+services:
+  - type: web
+    name: serv-clientes
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn serv_client:app --host 0.0.0.0 --port 8000
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+
+  - type: web
+    name: serv-productos
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn serv_productos:app --host 0.0.0.0 --port 8001
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+
+  - type: web
+    name: serv-pedidos
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn serv_pedidos:app --host 0.0.0.0 --port 8002
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+      - key: CLIENTES_URL
+        sync: false   # lo pones manualmente en el dashboard de Render
+      - key: PRODUCTOS_URL
+        sync: false
+      - key: INVENTARIO_URL
+        sync: false
+
+  - type: web
+    name: serv-inventario
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn serv_inventario:app --host 0.0.0.0 --port 8003
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+      - key: PRODUCTOS_URL
+        sync: false

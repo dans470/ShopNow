@@ -1,0 +1,41 @@
+id_producto,descripcion,precio
+1,Procesador AMD Ryzen 7 9700X 8 Núcleos 3.8GHz AM5,4299.00
+2,Procesador AMD Ryzen 9 9900X 12 Núcleos 4.4GHz AM5,6499.00
+3,Procesador AMD Ryzen 9 9950X 16 Núcleos 4.3GHz AM5,9999.00
+4,Procesador AMD Ryzen 5 9600X 6 Núcleos 3.9GHz AM5,3199.00
+5,Procesador AMD Ryzen AI 9 HX 370 12 Núcleos 2.0GHz AM5 NPU,11499.00
+6,Procesador AMD Ryzen AI 7 360 8 Núcleos 3.7GHz AM5 NPU,7999.00
+7,Procesador Intel Core Ultra 9 285K 24 Núcleos 3.7GHz LGA1851,9499.00
+8,Procesador Intel Core Ultra 7 265K 20 Núcleos 3.9GHz LGA1851,6999.00
+9,Procesador Intel Core Ultra 5 245K 14 Núcleos 3.6GHz LGA1851,4799.00
+10,Procesador Intel Core Ultra 7 265KF 20 Núcleos Sin Gráficos LGA1851,6499.00
+11,Tarjeta de Video NVIDIA GeForce RTX 5090 32GB GDDR7,39999.00
+12,Tarjeta de Video NVIDIA GeForce RTX 5080 16GB GDDR7,24999.00
+13,Tarjeta de Video NVIDIA GeForce RTX 5070 Ti 16GB GDDR7,18499.00
+14,Tarjeta de Video NVIDIA GeForce RTX 5070 12GB GDDR7,13999.00
+15,Tarjeta de Video NVIDIA GeForce RTX 5060 Ti 16GB GDDR7,9999.00
+16,Tarjeta de Video AMD Radeon RX 9070 XT 16GB GDDR6,13499.00
+17,Tarjeta de Video AMD Radeon RX 9070 16GB GDDR6,10999.00
+18,Tarjeta de Video AMD Radeon RX 9060 XT 8GB GDDR6,7499.00
+19,Memoria RAM Corsair Dominator Titanium 32GB DDR5 6400MHz Kit 2x16,2999.00
+20,Memoria RAM G.Skill Trident Z5 RGB 32GB DDR5 7200MHz Kit 2x16,3499.00
+21,Memoria RAM Kingston Fury Renegade 64GB DDR5 6000MHz Kit 2x32,5499.00
+22,SSD Samsung 990 Pro 2TB M.2 NVMe PCIe 5.0,2199.00
+23,SSD WD Black SN850X 2TB M.2 NVMe PCIe 4.0,1799.00
+24,SSD Crucial T705 1TB M.2 NVMe PCIe 5.0,1499.00
+25,Tarjeta Madre ASUS ROG Strix X870-E Gaming WiFi AM5 ATX,7999.00
+26,Tarjeta Madre MSI MEG X870 Ace AM5 ATX,8999.00
+27,Tarjeta Madre Gigabyte X870 Aorus Elite WiFi7 AM5 ATX,5499.00
+28,Tarjeta Madre ASUS ROG Maximus Z890 Apex LGA1851 ATX,12999.00
+29,Tarjeta Madre MSI Pro Z890-A WiFi LGA1851 ATX,3999.00
+30,Fuente de Poder Corsair HX1000i 1000W 80 Plus Platinum Modular,3299.00
+31,Fuente de Poder be quiet! Dark Power 13 1000W 80 Plus Titanium,3999.00
+32,Fuente de Poder ASUS ROG Thor 1000W 80 Plus Platinum Modular,3599.00
+33,Cooler CPU NZXT Kraken Elite 360mm AIO RGB LCD,4499.00
+34,Cooler CPU Corsair iCUE H150i Elite LCD 360mm AIO,3999.00
+35,Cooler CPU be quiet! Dark Rock Pro 5 250W TDP,1299.00
+36,Gabinete Lian Li O11 Dynamic EVO XL Full Tower Negro,3499.00
+37,Gabinete Fractal Design Torrent RGB ATX Mid Tower,2999.00
+38,Gabinete NZXT H9 Flow ATX Mid Tower Negro,2499.00
+39,Kit 3 Ventiladores Lian Li Uni Fan SL-Infinity 120mm ARGB,1899.00
+40,Kit 3 Ventiladores Corsair iCUE Link QX120 RGB 120mm,2499.00
