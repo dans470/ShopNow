@@ -18,7 +18,7 @@ Sistema de gestión de una tienda en línea construido con una arquitectura de *
 - [Estructura de archivos](#estructura-de-archivos)
 - [Validaciones implementadas](#validaciones-implementadas)
 - [Instalación local](#instalación-local)
-- [Despliegue en Render](#despliegue-en-render)
+- [Despliegue en la nube](#despliegue-en-la-nube)
 - [Endpoints disponibles](#endpoints-disponibles)
 
 ---
@@ -210,7 +210,6 @@ ShopNow/
 ├── serv_inventario.py      # Microservicio de Inventario   (puerto 8003)
 ├── serv_main.py            # Punto de entrada / orquestador
 ├── requirements.txt        # Dependencias Python
-├── render.yaml             # Configuración de despliegue en Render
 ├── docker-compose.yml      # Configuración para correr con Docker
 ├── start.sh                # Script para levantar todos los servicios localmente
 ├── .gitignore
@@ -307,29 +306,19 @@ Una vez levantados los servicios, accede a la documentación en:
 
 ---
 
-## Despliegue en Render
+## Despliegue en la nube
 
-El archivo `render.yaml` define los 4 servicios. El orden de despliegue importa por las dependencias entre servicios:
+El proyecto puede desplegarse en cualquier plataforma que soporte Python (Railway, Fly.io, Render, etc.). Cada microservicio se despliega como un servicio web independiente con su propio proceso.
 
-```
-1. serv-clientes    (independiente)
-2. serv-productos   (independiente)
-3. serv-inventario  (depende de Productos)
-4. serv-pedidos     (depende de los tres anteriores)
-```
+Las URLs entre servicios se pasan como variables de entorno para que funcionen en cualquier entorno:
 
-### Variables de entorno requeridas
-
-Una vez desplegados, configura estas variables en el dashboard de Render:
-
-| Servicio | Variable | Valor |
+| Variable | Usado en | Apunta a |
 |---|---|---|
-| `serv-pedidos` | `CLIENTES_URL` | `https://serv-clientes.onrender.com` |
-| `serv-pedidos` | `PRODUCTOS_URL` | `https://serv-productos.onrender.com` |
-| `serv-pedidos` | `INVENTARIO_URL` | `https://serv-inventario.onrender.com` |
-| `serv-inventario` | `PRODUCTOS_URL` | `https://serv-productos.onrender.com` |
+| `CLIENTES_URL` | `serv_pedidos` | URL pública de serv-clientes |
+| `PRODUCTOS_URL` | `serv_pedidos`, `serv_inventario` | URL pública de serv-productos |
+| `INVENTARIO_URL` | `serv_pedidos` | URL pública de serv-inventario |
 
-> ⚠️ En el plan gratuito de Render, los servicios se duermen tras 15 min de inactividad. La primera petición puede tardar ~30 segundos.
+Si no se definen, los servicios usan `localhost` por defecto (entorno de desarrollo local).
 
 ---
 
@@ -378,4 +367,3 @@ Una vez desplegados, configura estas variables en el dashboard de Render:
 | [Uvicorn](https://www.uvicorn.org/) | Servidor ASGI |
 | [httpx](https://www.python-httpx.org/) | Cliente HTTP para comunicación entre servicios |
 | CSV | Persistencia de datos ligera |
-| [Render](https://render.com/) | Plataforma de despliegue en la nube |
